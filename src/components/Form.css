@@ -1,40 +1,65 @@
 form h2 {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
   text-transform: capitalize;
-  font-weight: normal;
+  font-weight: 500;
+  color: #ebc712;
+  font-size: 26px;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding-bottom: 15px;
 }
 
+form h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #fffcc6, transparent);
+}
+
+/* Form control */
 .form-control {
   display: grid;
   grid-template-columns: 1fr 100px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(255, 251, 150, 0.1);
+  margin-bottom: 25px;
 }
 
 .form-input {
   width: 100%;
-  padding: 0.375rem 0.75rem;
-  border-radius: 0;
-  border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
-  border: 1px solid #ddd;
+  padding: 0.75rem 1rem;
+  border: none;
+  background: #fffbfc;
+  font-size: 16px;
+  color: #7a6a6a;
+  outline: none;
 }
 
 .form-input::placeholder {
-  color: #aaa;
+  color: #b9cad4;
+  font-style: italic;
 }
 
 .form-control .btn {
   cursor: pointer;
   color: #fff;
-  background: #06b6d4;
-  border: transparent;
-  border-radius: 0;
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
-  padding: 0.375rem 0.75rem;
+  background: linear-gradient(135deg, #eead2b, #f1d443);
+  border: none;
+  padding: 0.75rem;
   text-transform: capitalize;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  font-size: 16px;
+  transition: all 0.3s ease;
 }
 
 .form-control .btn:hover {
-  background: #0e7490;
+  background: linear-gradient(135deg, #ef9f27, #eda30f);
+  box-shadow: 0 4px 12px rgba(166, 128, 190, 0.3);
 }

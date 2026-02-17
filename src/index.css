@@ -7,9 +7,54 @@
 }
 
 body {
-  background: #eee;
-  font-family: Helvetica, sans-serif;
+  background: linear-gradient(135deg, #dedcbb 0%, #efea9e 100%);
+  font-family: 'Segoe UI', 'Arial', sans-serif;
   font-weight: 400;
-  line-height: 1.2;
-  color: #222;
+  line-height: 1.6;
+  color: #8e7900;
+  padding: 20px;
+  min-height: 100vh;
+}
+body::before {
+  content: '⭐️';
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 24px;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+body::after {
+  content: '⭐️';
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  font-size: 24px;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+.section-center {
+  margin: 0 auto;
+  margin-top: 60px;
+  max-width: 500px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 35px 30px;
+  box-shadow: 0 8px 25px rgba(135, 130, 85, 0.12);
+  border: 1px solid #eef5ff;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-center::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #f9da3f, #e8d44d);
+  border-radius: 16px 16px 0 0;
 }
